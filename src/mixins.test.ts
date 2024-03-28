@@ -176,4 +176,39 @@ describe(mixinsWith.name, () => {
             'www.example.com long boi https://www.example.com',
         );
     });
+
+    /** This test causes an infinite loop. */
+    // it('allows overrides and super calls', async () => {
+    //     await wrapPromiseInTimeout(
+    //         20,
+    //         (async () => {
+    //             class ParentClass {
+    //                 myMethod() {
+    //                     console.log('calling parent myMethod');
+    //                     return 32;
+    //                 }
+    //             }
+
+    //             const myMixin = defineMixin((parent: ParentClass) => {
+    //                 return {
+    //                     myMethod() {
+    //                         return 2;
+    //                         console.log(parent);
+    //                         console.log('calling mixin myMethod');
+    //                         return parent.myMethod() + 2;
+    //                     },
+    //                 };
+    //             });
+
+    //             class ChildClass extends mixinsWith(ParentClass, myMixin) {
+    //                 public override myMethod = () => {
+    //                     console.log('calling child myMethod');
+    //                     return super.myMethod() + 10;
+    //                 };
+    //             }
+
+    //             assert.strictEqual(new ChildClass().myMethod(), 44);
+    //         })(),
+    //     );
+    // });
 });

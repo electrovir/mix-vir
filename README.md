@@ -1,6 +1,6 @@
 # mix-vir
 
-Pseudo-mixins in Javascript.
+Pseudo-mixins in Javascript. Note that these have severe limitations.
 
 Generated docs: https://electrovir.github.io/mix-vir/functions/defineMixin.html
 
